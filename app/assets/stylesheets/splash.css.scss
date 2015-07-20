@@ -1,0 +1,59 @@
+@import "utils/variables";
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.root {
+  height: 100%;
+  padding-bottom: 10px;
+  color: #f7f7f7;
+  background: #333;
+}
+
+.cover {
+  width: 1000px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.splash {
+  font-weight: $bold;
+  font-size: 50px;
+}
+
+.name {
+  font-family: $font;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+
+.im-a {
+  .splash, .me-list {
+    float: left;
+    height: 100px;
+  }
+
+  .splash {
+    padding: 24px 20px 0 0;
+  }
+}
+
+.me-list {
+  position: relative;
+  width: 500px;
+  font-family: $font;
+  font-size: 60px;
+  overflow: hidden;
+
+  > li {
+    position: absolute;
+    top: 100px;
+    height: 100px;
+    transition: top 1s;
+  }
+
+  > li.show {
+    top: 0;
+  }
+}
