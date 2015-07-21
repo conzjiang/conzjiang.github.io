@@ -6,11 +6,10 @@
 
       <article class="im-a">
         <strong class="splash-text">& I'm a</strong>
-
         <ul class="me-list">
-          <li class="show">Software Engineer</li>
           <li>TV Watcher</li>
           <li>Cookie Enthusiast</li>
+          <li>Software Engineer</li>
         </ul>
       </article>
     </section>
@@ -56,36 +55,40 @@
 </ul>
 
 <script>
-  var doneScrolling = false;
-  var scrolling = false;
-  var $window = $(window);
+  $(document).on("ready", function () {
+    var doneScrolling = false;
+    var scrolling = false;
+    var $window = $(window);
+    var $imas = $(".me-list > li");
 
-  if ($window.scrollTop() < 10) {
-    $("html, body").addClass("disable-scroll");
+    if ($window.scrollTop() < 10) {
+      $("html, body").addClass("disable-scroll");
+      $imas.first().addClass("show");
 
-    $window.on("mousewheel touchstart", function (e) {
-      if (!doneScrolling && !scrolling) {
-        var $show = $(".show");
-        var index = $show.index() + 1;
-        var $imas = $(".me-list > li");
+      $window.on("mousewheel touchstart", function (e) {
+        if (!doneScrolling && !scrolling) {
+          var $show = $(".show");
+          var index = $show.index() + 1;
 
-        scrolling = true;
+          scrolling = true;
 
-        if ($imas.length !== index) {
-          $show.removeClass("show");
+          if ($imas.length !== index) {
+            $show.removeClass("show");
 
-          $imas.eq(index).addClass("show").on("transitionend", function () {
+            $imas.eq(index).addClass("show").on("transitionend", function () {
+              scrolling = false;
+            });
+          } else {
+            doneScrolling = true;
             scrolling = false;
-          });
-        } else {
-          doneScrolling = true;
-          scrolling = false;
-          $("html, body").removeClass("disable-scroll");
-          $window.off("mousewheel touchstart");
+
+            $("html, body").removeClass("disable-scroll");
+            $window.off("mousewheel touchstart");
+          }
         }
-      }
-    });
-  }
-
-
+      });
+    } else {
+      $imas.last().addClass("show");
+    }
+  });
 </script>
