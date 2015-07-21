@@ -1,10 +1,35 @@
+@import "utils/variables";
+
 .info-container {
   color: #333;
   background: #f7f7f7;
 }
 
-.info {
-  width: 1000px;
-  margin: auto;
-  padding: 100px 0;
+.resume {
+  > li {
+    margin: 30px 0;
+  }
+}
+
+h2 {
+  font-weight: $bold;
+}
+
+.location {
+  font-weight: $normal;
+
+  &:before {
+    content: "-";
+    margin: 0 5px;
+  }
+}
+
+.job-time {
+  &:before {
+    content: "(";
+  }
+
+  &:after {
+    content: ")";
+  }
 }
