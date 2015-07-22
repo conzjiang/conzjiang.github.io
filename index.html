@@ -13,6 +13,7 @@
 
     <script src="js/react.js"></script>
     <script src="js/build/header.js"></script>
+    <script src="js/build/about.js"></script>
 
     <script src="js/underscore.js"></script>
     <script src="js/backbone.js"></script>
@@ -22,6 +23,8 @@
       new Conz.Router({
         rootEl: document.getElementById("content")
       });
+
+      Backbone.history.start();
     </script>
   </body>
 </html>

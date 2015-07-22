@@ -1,5 +1,6 @@
 (function (root) {
-  var Conz = root.Conz = root.Conz || {};
+  var Conz = root.Conz;
+  var About = Conz.Components.About;
 
   Conz.Router = Backbone.Router.extend({
     initialize: function (options) {
@@ -14,7 +15,11 @@
     },
 
     about: function () {
+      this.render(React.createElement(About, null));
+    },
 
+    render: function (component) {
+      React.render(component, this.rootEl);
     }
   });
 })(this);
