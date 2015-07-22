@@ -1,15 +1,39 @@
 (function (root) {
-  var Header = React.createClass({
+  var Conz = root.Conz = root.Conz || {};
+  var Components = Conz.Components = Conz.Components || {};
+
+  Components.Header = React.createClass({
+    propTypes: {
+      selected: React.PropTypes.string
+    },
+
     render: function () {
+      var sections = ["about", "skills", "projects"];
+      sections = sections.map(this.createSection);
+
       return (
         <ul className="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+          {sections}
         </ul>
+      );
+    },
+
+    createSection: function (section, i) {
+      var url = "#" + section;
+      var text = section[0].toUpperCase() + section.slice(1);
+      var className = "";
+
+      if (this.props.selected === section) {
+        className = "selected";
+      }
+
+      return (
+        <li key={"nav-link-" + i}>
+          <a className={className} href={url}>
+            {text}
+          </a>
+        </li>
       );
     }
   });
-
-  React.render(<Header />, document.getElementById("nav"));
 })(this);
