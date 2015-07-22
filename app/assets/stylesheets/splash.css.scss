@@ -26,54 +26,54 @@
 }
 
 .splash-text {
-  font-weight: $bold;
-  font-size: 30px;
+  font-family: $font;
+  font-size: $medium;
 
   @media (min-width: 750px) {
-    font-size: 50px;
+    font-size: $large;
   }
 }
 
 .name {
-  font-size: 48px;
+  font-size: $large;
 
   @media (min-width: 750px) {
-    font-size: 100px;
+    font-size: $xlarge;
   }
 }
 
-.im-a {
-  .me-list {
-    height: 60px;
-  }
+$meListHeightMobile: $medium + 21px;
+//$meListHeightDesktop:;
 
+.im-a {
   @media (min-width: 750px) {
     .splash-text, .me-list {
       float: left;
-      height: 100px;
     }
 
     .splash-text {
-      padding: 24px 20px 0 0;
+      padding: 32px 15px 0 0;
     }
   }
 }
 
 .me-list {
   position: relative;
+  height: $meListHeightMobile;
   font-family: $font;
-  font-size: 36px;
+  font-size: $medium;
   overflow: hidden;
 
   @media (min-width: 750px) {
     width: 500px;
-    font-size: 60px;
+    height: 100px;
+    font-size: $larger;
   }
 
   > li {
     position: absolute;
-    top: 60px;
-    height: 60px;
+    top: $meListHeightMobile;
+    height: $meListHeightMobile;
     transition: top 1s;
 
     @media (min-width: 750px) {
