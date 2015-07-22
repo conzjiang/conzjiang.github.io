@@ -8,7 +8,7 @@
     },
 
     render: function () {
-      var sections = ["about", "skills", "projects"];
+      var sections = ["about", "projects"];
       sections = sections.map(this.createSection);
 
       return (
