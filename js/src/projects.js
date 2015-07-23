@@ -8,9 +8,9 @@
     },
 
     render: function () {
-      var projects = this.props.projects.map(function (project) {
+      var projects = this.props.projects.map(function (project, i) {
         return (
-          <li>
+          <li key={"project-" + i}>
             <img src={project.image} />
             <h3><a href={project.url}>{project.title}</a></h3>
             <p>{project.description}</p>

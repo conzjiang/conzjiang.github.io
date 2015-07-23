@@ -8,9 +8,9 @@
     },
 
     render: function () {
-      var projects = this.props.projects.map(function (project) {
+      var projects = this.props.projects.map(function (project, i) {
         return (
-          React.createElement("li", null, 
+          React.createElement("li", {key: "project-" + i}, 
             React.createElement("img", {src: project.image}), 
             React.createElement("h3", null, React.createElement("a", {href: project.url}, project.title)), 
             React.createElement("p", null, project.description), 
