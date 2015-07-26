@@ -56,5 +56,13 @@
 
 .icon-resume:before { content: '\e800'; } /* '' */
 .icon-linkedin:before { content: '\e801'; } /* '' */
-.icon-github:before { content: '\e802'; } /* '' */
+
+.icon-github:before {
+  content: '\e802';
+  display: block;
+  margin-left: .1em;
+  margin-right: .3em;
+  padding: 12px 1px;
+} /* '' */
+
 .icon-email:before { content: '\e803'; } /* '' */
