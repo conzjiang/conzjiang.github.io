@@ -21,7 +21,7 @@
     },
 
     showLabel: function () {
-      this.props.showLabel(this.props.description);
+      this.props.showLabel(this.props.description, this.props.url);
     }
   });
 })(this);

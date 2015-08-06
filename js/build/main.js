@@ -3,6 +3,13 @@
   var ContactLink = Conz.ContactLink;
 
   Conz.Main = React.createClass({displayName: "Main",
+    getInitialState: function () {
+      return {
+        selectedLink: "",
+        selectedUrl: "#"
+      };
+    },
+
     render: function () {
       return (
         React.createElement("section", {className: "section"}, 
@@ -25,23 +32,30 @@
             React.createElement(ContactLink, {
               url: "https://www.linkedin.com/in/conzjiang", 
               icon: "icon-linkedin", 
-              description: "LinkedIn", 
+              description: "LinkedIn: conzjiang", 
               showLabel: this.showLabel}), 
 
             React.createElement(ContactLink, {
               url: "https://github.com/conzjiang", 
               icon: "icon-github", 
-              description: "Github", 
+              description: "Github: conzjiang", 
               showLabel: this.showLabel})
           ), 
 
-          React.createElement("label", {ref: "description", className: "contact-description"})
+          React.createElement("label", {ref: "description", className: "contact-description"}, 
+            React.createElement("a", {href: this.state.selectedUrl, target: "_blank"}, 
+              this.state.selectedLink
+            )
+          )
         )
       );
     },
 
-    showLabel: function (description) {
-      React.findDOMNode(this.refs.description).innerHTML = description;
+    showLabel: function (description, url) {
+      this.setState({
+        selectedLink: description,
+        selectedUrl: url
+      });
     }
   });
 })(this);

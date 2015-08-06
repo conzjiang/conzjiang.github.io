@@ -3,6 +3,13 @@
   var ContactLink = Conz.ContactLink;
 
   Conz.Main = React.createClass({
+    getInitialState: function () {
+      return {
+        selectedLink: "",
+        selectedUrl: "#"
+      };
+    },
+
     render: function () {
       return (
         <section className="section">
@@ -25,23 +32,30 @@
             <ContactLink
               url="https://www.linkedin.com/in/conzjiang"
               icon="icon-linkedin"
-              description="LinkedIn"
+              description="LinkedIn: conzjiang"
               showLabel={this.showLabel} />
 
             <ContactLink
               url="https://github.com/conzjiang"
               icon="icon-github"
-              description="Github"
+              description="Github: conzjiang"
               showLabel={this.showLabel} />
           </ul>
 
-          <label ref="description" className="contact-description"></label>
+          <label ref="description" className="contact-description">
+            <a href={this.state.selectedUrl} target="_blank">
+              {this.state.selectedLink}
+            </a>
+          </label>
         </section>
       );
     },
 
-    showLabel: function (description) {
-      React.findDOMNode(this.refs.description).innerHTML = description;
+    showLabel: function (description, url) {
+      this.setState({
+        selectedLink: description,
+        selectedUrl: url
+      });
     }
   });
 })(this);
