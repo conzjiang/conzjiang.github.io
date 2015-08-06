@@ -12,7 +12,7 @@
 
     render: function () {
       return (
-        React.createElement("section", {className: "section"}, 
+        React.createElement("section", {className: "section black"}, 
           React.createElement("h1", null, "Constance Jiang"), 
           React.createElement("strong", {className: "sub-header"}, "Software Engineer in NYC"), 
 

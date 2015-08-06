@@ -12,7 +12,7 @@
 
     render: function () {
       return (
-        <section className="section">
+        <section className="section black">
           <h1>Constance Jiang</h1>
           <strong className="sub-header">Software Engineer in NYC</strong>
 
