@@ -1,7 +1,7 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
 
-  Conz.ContactLink = React.createClass({
+  Conz.ContactLink = React.createClass({displayName: "ContactLink",
     propTypes: {
       url: React.PropTypes.string,
       icon: React.PropTypes.string,
@@ -11,12 +11,12 @@
 
     render: function () {
       return (
-        <li>
-          <a href={this.props.url}
-            target="_blank"
-            className={this.props.icon}
-            onMouseOver={this.showLabel}></a>
-        </li>
+        React.createElement("li", null, 
+          React.createElement("a", {href: this.props.url, 
+            target: "_blank", 
+            className: this.props.icon, 
+            onMouseOver: this.showLabel})
+        )
       );
     },
 

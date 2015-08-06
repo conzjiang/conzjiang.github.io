@@ -1,5 +1,6 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
+  var ContactLink = Conz.ContactLink;
 
   Conz.Main = React.createClass({
     render: function () {
@@ -34,13 +35,13 @@
               showLabel={this.showLabel} />
           </ul>
 
-          <label className="contact-description"></label>
+          <label ref="description" className="contact-description"></label>
         </section>
       );
     },
 
-    showLabel: function () {
-      debugger
+    showLabel: function (description) {
+      React.findDOMNode(this.refs.description).innerHTML = description;
     }
   });
 })(this);
