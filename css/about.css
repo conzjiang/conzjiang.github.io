@@ -68,3 +68,9 @@ a {
   border: 2px solid;
   border-radius: 50%;
 }
+
+.contact-description {
+  display: block;
+  text-align: center;
+  cursor: auto;
+}

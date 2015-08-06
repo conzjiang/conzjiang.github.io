@@ -3,5 +3,4 @@
   var Main = Conz.Main;
 
   React.render(React.createElement(Main, null), document.getElementById("root"));
-
 })(this);
