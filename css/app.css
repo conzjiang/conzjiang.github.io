@@ -1,0 +1,55 @@
+html, body, section, h1, strong, a, ul, li, p, dl, dd, dt, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root, .wrapper {
+  height: 100%;
+}
+
+section.section {
+  height: calc(100% - 200px);
+  padding: 100px 0;
+}
+
+section.black {
+  color: #FFFAFB;
+  background: #151515;
+}
+
+section.white {
+  color: #151515;
+  background: #FFFAFB;
+}
