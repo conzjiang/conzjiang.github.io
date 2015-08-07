@@ -1,4 +1,4 @@
-html, body, section, h1, strong, a, ul, li, p, dl, dd, dt {
+html, body, section, h1, strong, a, ul, li, p, dl, dd, dt, div {
   margin: 0;
   padding: 0;
   border: 0;
@@ -35,12 +35,7 @@ a {
   text-decoration: none;
 }
 
-#root, #blah {
-  height: 100%;
-}
-
-#blah > li {
-  width: 100%;
+#root, .wrapper {
   height: 100%;
 }
 

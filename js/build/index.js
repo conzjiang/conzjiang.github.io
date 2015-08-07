@@ -1,8 +1,6 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
-  var About = Conz.About;
-  var Projects = Conz.Projects;
+  var App = Conz.App;
 
-  React.render(React.createElement(About, null), document.getElementById("main"));
-  React.render(React.createElement(Projects, null), document.getElementById("projects"));
+  React.render(React.createElement(App, null), document.getElementById("root"));
 })(this);
