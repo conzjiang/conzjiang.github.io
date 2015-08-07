@@ -40,6 +40,7 @@ a {
 }
 
 section.section {
+  position: relative;
   height: calc(100% - 200px);
   padding: 100px 0;
 }

@@ -3,14 +3,15 @@
 
   Conz.Project = React.createClass({displayName: "Project",
     propTypes: {
-      project: React.PropTypes.object
+      project: React.PropTypes.object,
+      className: React.PropTypes.string
     },
 
     render: function () {
       var project = this.props.project;
 
       return (
-        React.createElement("li", null, 
+        React.createElement("section", {className: "section " + this.props.className}, 
           React.createElement("h2", null, project.name), 
           React.createElement("img", {src: project.image}), 
 
