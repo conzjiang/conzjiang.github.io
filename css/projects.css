@@ -4,3 +4,17 @@
   display: block;
   width: 100%;
 }
+
+h2 {
+  display: block;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 27px;
+  text-align: center;
+}
+
+.project-image {
+  width: 300px;
+  height: auto;
+  margin: 20px auto;
+}

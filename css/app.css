@@ -1,4 +1,4 @@
-html, body, section, h1, strong, a, ul, li, p, dl, dd, dt, div {
+html, body, section, h1, strong, a, ul, li, p, dl, dd, dt, div, h2 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,6 +26,10 @@ h1 {
   letter-spacing: 1px;
 }
 
+img {
+  display: block;
+}
+
 ul {
   list-style: none;
 }
@@ -41,7 +45,7 @@ a {
 
 section.section {
   position: relative;
-  height: calc(100% - 200px);
+  height: calc(100% - 180px);
   padding: 100px 0;
 }
 

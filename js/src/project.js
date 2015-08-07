@@ -13,7 +13,7 @@
       return (
         <section className={"section " + this.props.className}>
           <h2>{project.name}</h2>
-          <img src={project.image} />
+          <img className="project-image" src={project.image} />
 
           <dl>
             <dt>Built with</dt>

@@ -13,7 +13,7 @@
       return (
         React.createElement("section", {className: "section " + this.props.className}, 
           React.createElement("h2", null, project.name), 
-          React.createElement("img", {src: project.image}), 
+          React.createElement("img", {className: "project-image", src: project.image}), 
 
           React.createElement("dl", null, 
             React.createElement("dt", null, "Built with"), 
