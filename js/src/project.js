@@ -1,5 +1,6 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
+  var ProjectLink = Conz.ProjectLink;
 
   Conz.Project = React.createClass({
     propTypes: {
@@ -14,6 +15,11 @@
         <section className={"section " + this.props.className}>
           <h2>{project.name}</h2>
           <img className="project-image" src={project.image} />
+
+          <ul className="project-links">
+            <ProjectLink url={this.props.project.live} text="live" />
+            <ProjectLink url={this.props.project.github} text="github" />
+          </ul>
 
           <dl>
             <dt>Built with</dt>
