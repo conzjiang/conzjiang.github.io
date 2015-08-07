@@ -2,7 +2,7 @@
   var Conz = root.Conz = root.Conz || {};
   var ContactLink = Conz.ContactLink;
 
-  Conz.Main = React.createClass({displayName: "Main",
+  Conz.About = React.createClass({displayName: "About",
     getInitialState: function () {
       return {
         selectedLink: "",
