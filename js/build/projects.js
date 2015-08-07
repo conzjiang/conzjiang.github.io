@@ -1,5 +1,6 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
+  var Project = Conz.Project;
 
   Conz.Projects = React.createClass({displayName: "Projects",
     getInitialState: function () {
@@ -39,12 +40,16 @@
     },
 
     render: function () {
+      var projects = this.state.projects.map(function (project, i) {
+        return (
+          React.createElement(Project, {key: "project-" + i, project: project})
+        );
+      });
+
       return (
         React.createElement("section", {className: "section white"}, 
           React.createElement("h1", null, "Projects"), 
-          React.createElement("ul", {className: "projects-list"}
-
-          )
+          React.createElement("ul", {className: "projects-list"}, projects)
         )
       );
     }
