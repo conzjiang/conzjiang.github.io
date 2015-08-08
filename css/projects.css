@@ -9,8 +9,14 @@ h2 {
   display: block;
   margin-bottom: 30px;
   font-weight: 700;
-  font-size: 27px;
+  font-size: 34px;
   line-height: 1;
+}
+
+@media (min-width: 600px) {
+  h2 {
+    font-size: 53px;
+  }
 }
 
 .project-image {
