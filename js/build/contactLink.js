@@ -11,10 +11,10 @@
 
     render: function () {
       return (
-        React.createElement("li", null, 
+        React.createElement("li", {className: this.props.icon}, 
           React.createElement("a", {href: this.props.url, 
             target: "_blank", 
-            className: this.props.icon, 
+            className: "icon-" + this.props.icon, 
             onMouseOver: this.showLabel})
         )
       );

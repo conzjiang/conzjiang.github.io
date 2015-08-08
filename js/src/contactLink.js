@@ -11,10 +11,10 @@
 
     render: function () {
       return (
-        <li>
+        <li className={this.props.icon}>
           <a href={this.props.url}
             target="_blank"
-            className={this.props.icon}
+            className={"icon-" + this.props.icon}
             onMouseOver={this.showLabel}></a>
         </li>
       );

@@ -27,25 +27,25 @@
         React.createElement("ul", {className: this.props.className + " group"}, 
           React.createElement(ContactLink, {
             url: "mailto:conzjiang(@)gmail.com", 
-            icon: "icon-email", 
+            icon: "email", 
             description: "conzjiang(@)gmail.com", 
             showLabel: this.props.showLabel}), 
 
           React.createElement(ContactLink, {
             url: "Constance Jiang - Resume.pdf", 
-            icon: "icon-resume", 
+            icon: "resume", 
             description: "Resume.pdf", 
             showLabel: this.props.showLabel}), 
 
           React.createElement(ContactLink, {
             url: "https://www.linkedin.com/in/conzjiang", 
-            icon: "icon-linkedin", 
+            icon: "linkedin", 
             description: "LinkedIn: conzjiang", 
             showLabel: this.props.showLabel}), 
 
           React.createElement(ContactLink, {
             url: "https://github.com/conzjiang", 
-            icon: "icon-github", 
+            icon: "github", 
             description: "Github: conzjiang", 
             showLabel: this.props.showLabel}), 
 

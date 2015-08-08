@@ -9,13 +9,4 @@
     <ContactLinks className="contact-floats" showX={true} />,
     document.getElementById("contact-me")
   );
-
-  var hideTriangle = function () {
-    if (window.scrollY > 20) {
-      document.getElementById("triangle").classList.add("hide");
-      window.removeEventListener("scroll", hideTriangle);
-    }
-  };
-
-  window.addEventListener("scroll", hideTriangle);
 })(this);

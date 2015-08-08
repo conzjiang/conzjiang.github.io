@@ -53,19 +53,32 @@
   position: fixed;
   right: 30px;
   bottom: 30px;
+  height: 46px;
   font-size: 27px;
 }
 
-.contact-floats > li {
-  float: left;
-  margin: 0 5px;
-  background: #ccc;
-  box-shadow: 1px 2px 5px #888;
-  border-radius: 50%;
+.contact-floats {
+  height: 46px;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.contact-floats > li:first-child {
-  margin-right: 0;
+.show {
+  opacity: 1;
+}
+
+.contact-floats > li {
+  background: #ccc;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 0;
+  transition: right 0.5s;
+}
+
+.contact-floats > .email {
+  box-shadow: 1px 2px 5px #888;
+  z-index: 1;
 }
 
 .contact-floats > li > a {
@@ -75,10 +88,6 @@
 
 .contact-floats > li > .icon-github {
   padding: 0.5px 3px;
-}
-
-.contact-floats > li:not(:first-child) {
-  display: none;
 }
 
 .x {
@@ -95,3 +104,34 @@
   left: 10px;
   font-size: 36px;
 }
+
+.contact-floats.open > li {
+  box-shadow: 1px 2px 5px #888;
+}
+
+.contact-floats.open > .github {
+  right: 56px;
+}
+
+.contact-floats.open > .linkedin {
+  right: 112px;
+}
+
+.contact-floats.open > .resume {
+  right: 168px;
+}
+
+.contact-floats.open > .email {
+  right: 224px;
+}
+
+.contact-floats.open > li:hover {
+  background: #eee;
+  box-shadow: 1px 2px 5px #151515;
+}
+
+.contact-floats.open > li:active {
+  top: 1px;
+  box-shadow: none;
+}
+
