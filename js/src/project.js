@@ -14,11 +14,13 @@
       return (
         <section className={"section " + this.props.className}>
           <h2>{project.name}</h2>
-          <img className="project-image" src={project.image} />
+          <a href={project.live || project.github} target="_blank">
+            <img className="project-image" src={project.image} />
+          </a>
 
           <ul className="project-links group">
-            <ProjectLink url={this.props.project.live} text="Live" />
-            <ProjectLink url={this.props.project.github} text="Github" />
+            <ProjectLink url={project.live} text="Live" />
+            <ProjectLink url={project.github} text="Github" />
           </ul>
 
           <dl>

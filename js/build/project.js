@@ -14,11 +14,13 @@
       return (
         React.createElement("section", {className: "section " + this.props.className}, 
           React.createElement("h2", null, project.name), 
-          React.createElement("img", {className: "project-image", src: project.image}), 
+          React.createElement("a", {href: project.live || project.github, target: "_blank"}, 
+            React.createElement("img", {className: "project-image", src: project.image})
+          ), 
 
           React.createElement("ul", {className: "project-links group"}, 
-            React.createElement(ProjectLink, {url: this.props.project.live, text: "Live"}), 
-            React.createElement(ProjectLink, {url: this.props.project.github, text: "Github"})
+            React.createElement(ProjectLink, {url: project.live, text: "Live"}), 
+            React.createElement(ProjectLink, {url: project.github, text: "Github"})
           ), 
 
           React.createElement("dl", null, 
