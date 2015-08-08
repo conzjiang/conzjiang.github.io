@@ -7,9 +7,10 @@
 
 h2 {
   display: block;
-  margin: 20px 0;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 27px;
+  line-height: 1;
 }
 
 .project-image {
@@ -19,7 +20,7 @@ h2 {
 }
 
 .project-links {
-  margin: 20px 0;
+  margin: 30px 0;
   text-transform: lowercase;
   font-size: 11px;
 }
@@ -53,11 +54,11 @@ h2 {
 .project-description {
   display: block;
   width: 90%;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 .tech-list {
-  margin: 20px 0;
+  margin: 30px 0;
   font-size: 14px;
 }
 

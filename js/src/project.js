@@ -19,6 +19,12 @@
       return (
         <section className={"section " + this.props.className}>
           <h2>{project.name}</h2>
+
+          <dl className="tech-list">
+            <dt className="label">Built with</dt>
+            <dd>{techs}</dd>
+          </dl>
+
           <a href={project.live || project.github} target="_blank">
             <img className="project-image" src={project.image} />
           </a>
@@ -29,11 +35,6 @@
           </ul>
 
           <p className="project-description">{project.description}</p>
-
-          <dl className="tech-list">
-            <dt className="label">Built with</dt>
-            <dd>{techs}</dd>
-          </dl>
         </section>
       );
     }
