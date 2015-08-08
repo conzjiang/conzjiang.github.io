@@ -46,6 +46,7 @@ a {
 
 section.section {
   position: relative;
+  min-height: 600px;
   height: calc(100% - 180px);
   padding: 100px 0;
 }

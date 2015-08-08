@@ -10,6 +10,11 @@
 
     render: function () {
       var project = this.props.project;
+      var techs = project.tech.map(function (tech, i) {
+        return (
+          <span key={"tech-" + i} className="tech">{tech}</span>
+        );
+      });
 
       return (
         <section className={"section " + this.props.className}>
@@ -23,12 +28,12 @@
             <ProjectLink url={project.github} text="Github" />
           </ul>
 
-          <dl>
-            <dt>Built with</dt>
-            <dd>{project.tech.join(", ")}</dd>
-          </dl>
+          <p className="project-description">{project.description}</p>
 
-          <p>{project.description}</p>
+          <dl className="tech-list">
+            <dt className="label">Built with</dt>
+            <dd>{techs}</dd>
+          </dl>
         </section>
       );
     }

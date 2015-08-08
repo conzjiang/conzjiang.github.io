@@ -10,6 +10,11 @@
 
     render: function () {
       var project = this.props.project;
+      var techs = project.tech.map(function (tech, i) {
+        return (
+          React.createElement("span", {key: "tech-" + i, className: "tech"}, tech)
+        );
+      });
 
       return (
         React.createElement("section", {className: "section " + this.props.className}, 
@@ -23,12 +28,12 @@
             React.createElement(ProjectLink, {url: project.github, text: "Github"})
           ), 
 
-          React.createElement("dl", null, 
-            React.createElement("dt", null, "Built with"), 
-            React.createElement("dd", null, project.tech.join(", "))
-          ), 
+          React.createElement("p", {className: "project-description"}, project.description), 
 
-          React.createElement("p", null, project.description)
+          React.createElement("dl", {className: "tech-list"}, 
+            React.createElement("dt", {className: "label"}, "Built with"), 
+            React.createElement("dd", null, techs)
+          )
         )
       );
     }

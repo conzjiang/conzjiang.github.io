@@ -29,8 +29,20 @@ h2 {
   margin: 0 10px;
 }
 
-.project-link:hover {
+.project-link, .blank-project-link {
+  display: inline-block;
+  padding: 1px 3px;
+}
+
+.project-link {
+  color: #151515;
   background: #ccc;
+  border-radius: 2px;
+}
+
+.project-link:hover {
+  color: #FFFAFB;
+  background: #666;
 }
 
 .blank-project-link {
@@ -38,6 +50,19 @@ h2 {
   color: #ccc;
 }
 
-section.black .project-link:hover {
-  color: #151515;
+.project-description {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.tech-list {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.tech {
+  display: inline-block;
+  margin: 0 5px;
+  text-transform: uppercase;
 }
