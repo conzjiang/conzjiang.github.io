@@ -49,26 +49,23 @@
   }
 }
 
-#contact-me {
+.contact-floats {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  top: 10px;
+  right: 10px;
   height: 46px;
   font-size: 27px;
-}
 
-.contact-floats {
-  height: 46px;
   opacity: 0;
   transition: opacity 1s;
 }
 
-.show {
+.show .contact-floats {
   opacity: 1;
 }
 
 .contact-floats > li {
-  background: #ccc;
+  background: #eee;
   border-radius: 50%;
 
   position: absolute;
@@ -105,32 +102,46 @@
   font-size: 36px;
 }
 
-.contact-floats.open > li {
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.open > .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  opacity: 0.7;
+}
+
+.open .contact-floats > li {
   box-shadow: 1px 2px 5px #888;
 }
 
-.contact-floats.open > .github {
+.open .contact-floats > .github {
   right: 56px;
 }
 
-.contact-floats.open > .linkedin {
+.open .contact-floats > .linkedin {
   right: 112px;
 }
 
-.contact-floats.open > .resume {
+.open .contact-floats > .resume {
   right: 168px;
 }
 
-.contact-floats.open > .email {
+.open .contact-floats > .email {
   right: 224px;
 }
 
-.contact-floats.open > li:hover {
-  background: #eee;
+.open .contact-floats > li:hover {
+  background: #FFFAFB;
   box-shadow: 1px 2px 5px #151515;
 }
 
-.contact-floats.open > li:active {
+.open .contact-floats > li:active {
   top: 1px;
   box-shadow: none;
 }

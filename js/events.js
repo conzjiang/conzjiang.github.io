@@ -1,35 +1,39 @@
 (function (root) {
-  var contactMe = document.getElementById("contact-me");
+  var main = document.getElementById("root");
+  var contactMe = document.getElementById("contact-floats");
   var contactFloats = contactMe.querySelectorAll(".contact-floats")[0];
 
   var hideTriangle = function () {
-    if (window.scrollY > 20) {
+    if (main.scrollTop > 20) {
       document.getElementById("triangle").classList.add("hide");
     }
 
-    if (window.scrollY > window.innerHeight) {
-      contactFloats.classList.add("show");
+    if (main.scrollTop > (window.innerHeight)) {
+      contactMe.classList.add("show");
     } else {
-      contactFloats.classList.remove("show open");
+      contactMe.classList.remove("show");
     }
   };
 
-  window.addEventListener("scroll", hideTriangle);
+  main.addEventListener("scroll", hideTriangle);
 
   var contactLinksOpen = false;
 
-  contactMe.addEventListener("click", function (e) {
+  contactFloats.addEventListener("click", function (e) {
     if (contactLinksOpen) { return; }
 
     contactLinksOpen = true;
     e.preventDefault();
-    contactFloats.classList.add("open");
+    contactMe.classList.add("open");
+    main.classList.add("overflow-hidden");
   });
 
-  var x = contactMe.querySelectorAll(".x")[0];
+  var x = contactFloats.querySelectorAll(".x")[0];
 
-  x.addEventListener("click", function () {
-    contactFloats.classList.remove("open");
+  x.addEventListener("click", function (e) {
+    e.stopPropagation();
+    contactMe.classList.remove("open");
+    main.classList.remove("overflow-hidden");
 
     setTimeout(function () {
       contactLinksOpen = false;
