@@ -1,5 +1,6 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
+  var TechList = Conz.TechList;
   var ProjectLink = Conz.ProjectLink;
 
   Conz.Project = React.createClass({
@@ -10,20 +11,12 @@
 
     render: function () {
       var project = this.props.project;
-      var techs = project.tech.map(function (tech, i) {
-        return (
-          <span key={"tech-" + i} className="tech">{tech}</span>
-        );
-      });
 
       return (
         <section className={"section " + this.props.className}>
           <h2>{project.name}</h2>
 
-          <dl className="tech-list">
-            <dt className="label">Built with</dt>
-            <dd>{techs}</dd>
-          </dl>
+          <TechList techs={project.techs} />
 
           <a href={project.live || project.github} target="_blank">
             <img className="project-image" src={project.image} />

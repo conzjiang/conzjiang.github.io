@@ -1,5 +1,6 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
+  var TechList = Conz.TechList;
   var ProjectLink = Conz.ProjectLink;
 
   Conz.Project = React.createClass({displayName: "Project",
@@ -10,20 +11,12 @@
 
     render: function () {
       var project = this.props.project;
-      var techs = project.tech.map(function (tech, i) {
-        return (
-          React.createElement("span", {key: "tech-" + i, className: "tech"}, tech)
-        );
-      });
 
       return (
         React.createElement("section", {className: "section " + this.props.className}, 
           React.createElement("h2", null, project.name), 
 
-          React.createElement("dl", {className: "tech-list"}, 
-            React.createElement("dt", {className: "label"}, "Built with"), 
-            React.createElement("dd", null, techs)
-          ), 
+          React.createElement(TechList, {techs: project.techs}), 
 
           React.createElement("a", {href: project.live || project.github, target: "_blank"}, 
             React.createElement("img", {className: "project-image", src: project.image})
