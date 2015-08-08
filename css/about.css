@@ -1,18 +1,18 @@
 .sub-header {
   display: block;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
 }
 
 .contact-links {
-  width: 330px;
+  width: 318px;
   margin: 30px auto;
 }
 
 .contact-links > li {
   float: left;
   margin: 0 10px;
-  font-size: 36px;
+  font-size: 34px;
 }
 
 .contact-links > li:first-child {
