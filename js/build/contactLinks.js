@@ -5,10 +5,24 @@
   Conz.ContactLinks = React.createClass({displayName: "ContactLinks",
     propTypes: {
       className: React.PropTypes.string,
-      showLabel: React.PropTypes.func
+      showLabel: React.PropTypes.func,
+      showX: React.PropTypes.bool
+    },
+
+    getDefaultProps: function () {
+      return {
+        showLabel: function () {},
+        showX: false
+      };
     },
 
     render: function () {
+      var x;
+
+      if (this.props.showX) {
+        x = React.createElement("li", {className: "x"});
+      }
+
       return (
         React.createElement("ul", {className: this.props.className + " group"}, 
           React.createElement(ContactLink, {
@@ -33,7 +47,9 @@
             url: "https://github.com/conzjiang", 
             icon: "icon-github", 
             description: "Github: conzjiang", 
-            showLabel: this.props.showLabel})
+            showLabel: this.props.showLabel}), 
+
+          x
         )
       );
     }

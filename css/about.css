@@ -28,24 +28,32 @@
   margin-right: 0;
 }
 
-.contact-links a {
+.contact-links > li > a {
   display: inline-block;
   padding: 3px 8px;
 }
 
-.contact-links a:hover {
+.contact-links > li > a:hover {
   padding: 1px 6px;
   border: 2px solid;
   border-radius: 50%;
 }
 
+.contact-links > li > .icon-github {
+  padding: 3px 5px;
+}
+
+.contact-links > li > .icon-github:hover {
+  padding: 1px 3px;
+}
+
 @media (min-width: 600px) {
-  .contact-links .icon-github {
+  .contact-links > li > .icon-github {
     padding: 8px;
     padding-bottom: 7px;
   }
 
-  .contact-links .icon-github:hover {
+  .contact-links > li > .icon-github:hover {
     padding: 6px;
     padding-bottom: 5px;
   }

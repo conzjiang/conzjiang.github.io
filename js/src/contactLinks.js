@@ -5,10 +5,24 @@
   Conz.ContactLinks = React.createClass({
     propTypes: {
       className: React.PropTypes.string,
-      showLabel: React.PropTypes.func
+      showLabel: React.PropTypes.func,
+      showX: React.PropTypes.bool
+    },
+
+    getDefaultProps: function () {
+      return {
+        showLabel: function () {},
+        showX: false
+      };
     },
 
     render: function () {
+      var x;
+
+      if (this.props.showX) {
+        x = <li className="x" />;
+      }
+
       return (
         <ul className={this.props.className + " group"}>
           <ContactLink
@@ -34,6 +48,8 @@
             icon="icon-github"
             description="Github: conzjiang"
             showLabel={this.props.showLabel} />
+
+          {x}
         </ul>
       );
     }

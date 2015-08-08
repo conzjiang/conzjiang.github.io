@@ -49,4 +49,49 @@
   }
 }
 
+#contact-me {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  font-size: 27px;
+}
 
+.contact-floats > li {
+  float: left;
+  margin: 0 5px;
+  background: #ccc;
+  box-shadow: 1px 2px 5px #888;
+  border-radius: 50%;
+}
+
+.contact-floats > li:first-child {
+  margin-right: 0;
+}
+
+.contact-floats > li > a {
+  display: block;
+  padding: 1px 4px;
+}
+
+.contact-floats > li > .icon-github {
+  padding: 0.5px 3px;
+}
+
+.contact-floats > li:not(:first-child) {
+  display: none;
+}
+
+.x {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+}
+
+.x:before {
+  content: "\00D7";
+  position: absolute;
+  top: -3px;
+  left: 10px;
+  font-size: 36px;
+}
