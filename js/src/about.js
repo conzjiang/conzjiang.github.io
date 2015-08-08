@@ -24,7 +24,7 @@
               showLabel={this.showLabel} />
 
             <ContactLink
-              url="#"
+              url="Constance Jiang - Resume.pdf"
               icon="icon-resume"
               description="Resume.pdf"
               showLabel={this.showLabel} />
