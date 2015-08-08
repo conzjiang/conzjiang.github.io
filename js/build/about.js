@@ -46,7 +46,9 @@
             React.createElement("a", {href: this.state.selectedUrl, target: "_blank"}, 
               this.state.selectedLink
             )
-          )
+          ), 
+
+          React.createElement("figure", {className: "triangle", id: "triangle"})
         )
       );
     },

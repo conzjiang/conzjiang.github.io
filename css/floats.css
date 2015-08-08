@@ -1,0 +1,52 @@
+.triangle {
+  position: absolute;
+  bottom: 80px;
+  display: block;
+  width: 100%;
+
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.triangle:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 30px solid #FFFAFB;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 0;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: bounce 1s infinite;
+}
+
+.hide {
+  opacity: 0;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 2px;
+  }
+
+  25% {
+    top: 4px;
+  }
+
+  50% {
+    top: 2px;
+  }
+
+  75% {
+    top: 0px;
+  }
+
+  100% {
+    top: -1px;
+  }
+}
+
+

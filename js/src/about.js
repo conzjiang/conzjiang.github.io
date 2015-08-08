@@ -47,6 +47,8 @@
               {this.state.selectedLink}
             </a>
           </label>
+
+          <figure className="triangle" id="triangle"></figure>
         </section>
       );
     },
