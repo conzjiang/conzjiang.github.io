@@ -49,13 +49,13 @@
 
 @media (min-width: 600px) {
   .contact-links > li > .icon-github {
-    padding: 8px;
-    padding-bottom: 7px;
+    padding: 15px 10px;
+    padding-bottom: 14px;
   }
 
   .contact-links > li > .icon-github:hover {
-    padding: 6px;
-    padding-bottom: 5px;
+    padding: 13px 8px;
+    padding-bottom: 12px;
   }
 }
 
