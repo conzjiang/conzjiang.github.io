@@ -1,0 +1,12 @@
+.copyright {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  left: 5%;
+}
+
+h3 {
+  font-size: 27px;
+  font-weight: 700;
+}

@@ -1,6 +1,9 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
-  var About = Conz.About, Projects = Conz.Projects, Project = Conz.Project;
+  var About = Conz.About,
+      Projects = Conz.Projects,
+      Project = Conz.Project,
+      Copyright = Conz.Copyright;
 
   Conz.App = React.createClass({displayName: "App",
     getInitialState: function () {
@@ -55,7 +58,8 @@
         React.createElement("div", {className: "wrapper"}, 
           React.createElement(About, null), 
           React.createElement(Projects, null), 
-          projects
+          projects, 
+          React.createElement(Copyright, null)
         )
       );
     }

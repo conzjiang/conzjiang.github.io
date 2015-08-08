@@ -16,7 +16,7 @@
         <section className={"section " + this.props.className}>
           <h2>{project.name}</h2>
 
-          <TechList techs={project.techs} />
+          <TechList techs={project.tech} />
 
           <a href={project.live || project.github} target="_blank">
             <img className="project-image" src={project.image} />

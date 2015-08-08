@@ -16,7 +16,7 @@
         React.createElement("section", {className: "section " + this.props.className}, 
           React.createElement("h2", null, project.name), 
 
-          React.createElement(TechList, {techs: project.techs}), 
+          React.createElement(TechList, {techs: project.tech}), 
 
           React.createElement("a", {href: project.live || project.github, target: "_blank"}, 
             React.createElement("img", {className: "project-image", src: project.image})

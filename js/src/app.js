@@ -1,6 +1,9 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
-  var About = Conz.About, Projects = Conz.Projects, Project = Conz.Project;
+  var About = Conz.About,
+      Projects = Conz.Projects,
+      Project = Conz.Project,
+      Copyright = Conz.Copyright;
 
   Conz.App = React.createClass({
     getInitialState: function () {
@@ -56,6 +59,7 @@
           <About />
           <Projects />
           {projects}
+          <Copyright />
         </div>
       );
     }
