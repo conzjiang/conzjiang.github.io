@@ -27,6 +27,12 @@ h1 {
   letter-spacing: 1px;
 }
 
+@media (min-width: 600px) {
+  h1 {
+    font-size: 53px;
+  }
+}
+
 img {
   display: block;
 }
