@@ -1,6 +1,6 @@
 (function (root) {
   var Conz = root.Conz = root.Conz || {};
-  var ContactLink = Conz.ContactLink;
+  var ContactLinks = Conz.ContactLinks;
 
   Conz.About = React.createClass({
     getInitialState: function () {
@@ -16,31 +16,7 @@
           <h1>Constance Jiang</h1>
           <strong className="sub-header">Software Engineer in NYC</strong>
 
-          <ul className="contact-links group">
-            <ContactLink
-              url="mailto:conzjiang(@)gmail.com"
-              icon="icon-email"
-              description="conzjiang(@)gmail.com"
-              showLabel={this.showLabel} />
-
-            <ContactLink
-              url="Constance Jiang - Resume.pdf"
-              icon="icon-resume"
-              description="Resume.pdf"
-              showLabel={this.showLabel} />
-
-            <ContactLink
-              url="https://www.linkedin.com/in/conzjiang"
-              icon="icon-linkedin"
-              description="LinkedIn: conzjiang"
-              showLabel={this.showLabel} />
-
-            <ContactLink
-              url="https://github.com/conzjiang"
-              icon="icon-github"
-              description="Github: conzjiang"
-              showLabel={this.showLabel} />
-          </ul>
+          <ContactLinks className="contact-links" showLabel={this.showLabel} />
 
           <label ref="description" className="contact-description">
             <a href={this.state.selectedUrl} target="_blank">
