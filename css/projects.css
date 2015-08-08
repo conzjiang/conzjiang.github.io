@@ -10,7 +10,6 @@ h2 {
   margin: 20px 0;
   font-weight: 700;
   font-size: 27px;
-  text-align: center;
 }
 
 .project-image {
@@ -21,7 +20,6 @@ h2 {
 
 .project-links {
   margin: 20px 0;
-  text-align: center;
   text-transform: lowercase;
   font-size: 11px;
 }

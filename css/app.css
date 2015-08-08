@@ -12,6 +12,7 @@ html, body {
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 .group:after {
@@ -23,7 +24,6 @@ body {
 h1 {
   font-weight: 700;
   font-size: 34px;
-  text-align: center;
   letter-spacing: 1px;
 }
 
