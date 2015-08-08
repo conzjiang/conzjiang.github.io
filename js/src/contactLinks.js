@@ -26,9 +26,9 @@
       return (
         <ul className={this.props.className + " group"}>
           <ContactLink
-            url="mailto:conzjiang(@)gmail.com"
+            url="mailto:conzjiang@gmail.com"
             icon="email"
-            description="conzjiang(@)gmail.com"
+            description="conzjiang@gmail.com"
             showLabel={this.props.showLabel} />
 
           <ContactLink
