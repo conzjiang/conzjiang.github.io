@@ -14,12 +14,12 @@
     link: function () {
       if (this.props.url) {
         return (
-          <a href={this.props.url} className="project-link">
+          <a href={this.props.url} className="project-link" target="_blank">
             {this.props.text}
           </a>
         );
       } else {
-        return this.props.text;
+        return (<span className="blank-project-link">{this.props.text}</span>);
       }
     }
   });

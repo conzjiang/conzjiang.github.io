@@ -14,12 +14,12 @@
     link: function () {
       if (this.props.url) {
         return (
-          React.createElement("a", {href: this.props.url, className: "project-link"}, 
+          React.createElement("a", {href: this.props.url, className: "project-link", target: "_blank"}, 
             this.props.text
           )
         );
       } else {
-        return this.props.text;
+        return (React.createElement("span", {className: "blank-project-link"}, this.props.text));
       }
     }
   });

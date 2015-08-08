@@ -16,9 +16,9 @@
           <h2>{project.name}</h2>
           <img className="project-image" src={project.image} />
 
-          <ul className="project-links">
-            <ProjectLink url={this.props.project.live} text="live" />
-            <ProjectLink url={this.props.project.github} text="github" />
+          <ul className="project-links group">
+            <ProjectLink url={this.props.project.live} text="Live" />
+            <ProjectLink url={this.props.project.github} text="Github" />
           </ul>
 
           <dl>

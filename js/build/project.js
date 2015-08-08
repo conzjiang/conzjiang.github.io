@@ -16,9 +16,9 @@
           React.createElement("h2", null, project.name), 
           React.createElement("img", {className: "project-image", src: project.image}), 
 
-          React.createElement("ul", {className: "project-links"}, 
-            React.createElement(ProjectLink, {url: this.props.project.live, text: "live"}), 
-            React.createElement(ProjectLink, {url: this.props.project.github, text: "github"})
+          React.createElement("ul", {className: "project-links group"}, 
+            React.createElement(ProjectLink, {url: this.props.project.live, text: "Live"}), 
+            React.createElement(ProjectLink, {url: this.props.project.github, text: "Github"})
           ), 
 
           React.createElement("dl", null, 
