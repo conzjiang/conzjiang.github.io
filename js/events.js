@@ -26,7 +26,7 @@
     main.classList.add("overflow-hidden");
   });
 
-  x.addEventListener("click", function (e) {
+  var closeModal = function (e) {
     e.stopPropagation();
     contactMe.classList.remove("open");
     main.classList.remove("overflow-hidden");
@@ -34,5 +34,8 @@
     setTimeout(function () {
       contactLinksOpen = false;
     });
-  });
+  };
+
+  x.addEventListener("click", closeModal);
+  document.querySelectorAll(".cover")[0].addEventListener("click", closeModal);
 })(this);
