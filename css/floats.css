@@ -98,7 +98,7 @@
 }
 
 .contact-floats > li {
-  background: #eee;
+  background: #C6DBF0;
   border-radius: 50%;
 
   position: absolute;
@@ -171,7 +171,7 @@
 
 .open .contact-floats > li:hover {
   background: #FFFAFB;
-  box-shadow: 1px 2px 5px #151515;
+  box-shadow: 1px 2px 5px #25283D;
 }
 
 .open .contact-floats > li:active {

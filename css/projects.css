@@ -42,14 +42,14 @@ h2 {
 }
 
 .project-link {
-  color: #151515;
-  background: #ccc;
+  color: #25283D;
+  background: #C6DBF0;
   border-radius: 2px;
 }
 
 .project-link:hover {
   color: #FFFAFB;
-  background: #666;
+  background: #888;
 }
 
 .blank-project-link {
