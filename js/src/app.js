@@ -16,12 +16,27 @@
       this.setState({
         projects: [
           {
-            name: "Clickster",
-            live: "https://clickster.herokuapp.com/",
-            github: "https://github.com/conzjiang/clickster_v2",
-            image: "images/clickster.jpg",
+            name: "Qliqster",
+            live: "https://qliqster.com",
+            github: "https://github.com/conzjiang/qliqster",
+            image: "images/qliqster.jpg",
             tech: ["Rails", "Backbone.js", "responsively-designed"],
             description: "Track the TV shows you watch, love, want to watch, etc."
+          },
+          {
+            name: 'hello world!',
+            live: 'http://hello.constancejiang.com',
+            github: 'https://github.com/conzjiang/node_chatroom',
+            image: 'images/hello_world.jpg',
+            tech: ['Node.js', 'socket.io', 'Backbone.js'],
+            description: 'Live chatroom with private chat functionality.'
+          },
+          {
+            name: "dollabill",
+            github: "https://github.com/conzjiang/dollabill",
+            image: "images/dollabill.jpg",
+            tech: ["JavaScript"],
+            description: "Custom JavaScript implementation of jQuery."
           },
           {
             name: "A Very Hungry Caterpillar",
@@ -30,13 +45,6 @@
             image: "images/snake.jpg",
             tech: ["JavaScript", "jQuery"],
             description: "Classic game of Snake in the browser."
-          },
-          {
-            name: "dollabill",
-            github: "https://github.com/conzjiang/dollabill",
-            image: "images/dollabill.jpg",
-            tech: ["JavaScript"],
-            description: "Custom JavaScript implementation of jQuery."
           }
         ]
       });
@@ -54,12 +62,14 @@
         );
       });
 
+      var copyrightClass = (this.state.projects.length % 2) ? "white" : "black";
+
       return (
         <div className="wrapper">
           <About />
           <Projects />
           {projects}
-          <Copyright />
+          <Copyright className={copyrightClass} />
         </div>
       );
     }

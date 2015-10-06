@@ -16,3 +16,4 @@
 /tmp
 
 /js/build/.module-cache
+/node_modules

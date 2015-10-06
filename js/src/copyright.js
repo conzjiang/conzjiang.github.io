@@ -3,11 +3,15 @@
   var TechList = Conz.TechList;
 
   Conz.Copyright = React.createClass({
+    propTypes: {
+      className: React.PropTypes.string
+    },
+
     render: function () {
       return (
-        <section className="section white">
+        <section className={"section " + this.props.className}>
           <article className="copyright">
-            <h3>Constance Jiang{'\u0027'}s Portfolio</h3>
+            <h3>Constance Jiang's Portfolio</h3>
             {'\u00A9'} 2015 Constance Jiang
             <TechList techs={["React.js"]} />
           </article>

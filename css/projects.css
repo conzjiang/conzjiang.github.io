@@ -23,6 +23,15 @@ h2 {
   width: 300px;
   height: auto;
   margin: 20px auto;
+  border: 10px solid;
+}
+
+section.black .project-image {
+  border-color: #FFFAFB;
+}
+
+section.white .project-image {
+  border-color: #25283D;
 }
 
 .project-links {
@@ -49,7 +58,7 @@ h2 {
 
 .project-link:hover {
   color: #FFFAFB;
-  background: #888;
+  background: #5786B5;
 }
 
 .blank-project-link {
