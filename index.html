@@ -84,6 +84,13 @@
       font-size: 40px;
     }
 
+    /* small breakpoint where title is all on one line */
+    @media(min-width: 375px) and (max-width: 500px) {
+      h1 {
+        background: #171d16;
+      }
+    }
+
     @media(min-width: 500px) {
       h1 {
         letter-spacing: 1px;
@@ -91,7 +98,8 @@
       }
     }
 
-    @media(min-width: 640px) {
+    /* large breakpoint where title is all on one line */
+    @media(min-width: 605px) {
       .title-wrapper {
         top: 32px;
       }
