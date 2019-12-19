@@ -181,6 +181,20 @@
       margin-bottom: 24px;
     }
 
+    .reel-video {
+      width: 240px;
+      height: 135px;
+      margin: auto;
+      display: block;
+    }
+
+    @media(min-width: 640px) {
+      .reel-video {
+        width: 544px;
+        height: 306px;
+      }
+    }
+
     p {
       line-height: 24px;
     }
@@ -249,6 +263,9 @@
       <nav>
         <ul class="nav-items-wrapper">
           <li class="nav-item">
+            <a class="nav-highlight" href="#reel">reel</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-highlight" href="#about">about</a>
           </li>
           <li class="nav-item">
@@ -261,6 +278,11 @@
       </nav>
     </header>
     <main>
+      <section id="reel" class="main-section">
+        <h2>reel</h2>
+        <iframe class="reel-video" src="https://www.youtube.com/embed/g2-5GBMR7OQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+
       <section id="about" class="main-section">
         <h2>about</h2>
         <p>Constance Jiang is a petite, black-haired, brown-eyed actress based in Los Angeles, California. Is she 20? Is she 30? The range she has! (She even got mistaken once for a 16-year-old in the year 2019!!) She speaks Mandarin Chinese.</p>
