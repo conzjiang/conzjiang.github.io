@@ -88,7 +88,7 @@
     }
 
     /* small breakpoint where title is all on one line */
-    @media(min-width: 375px) and (max-width: 500px) {
+    @media(min-width: 375px) and (max-width: 499px) {
       h1 {
         background: #171d16;
       }
@@ -114,14 +114,14 @@
 
     .nav-items-wrapper {
       position: absolute;
-      bottom: 64px;
+      bottom: 24px;
       left: 40px;
     }
 
     .nav-item {
       display: block;
       font-size: 24px;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
 
     @media (hover: hover) {
@@ -131,25 +131,32 @@
       }
     }
 
+    /* Heading is all on one line, so push nav items up more to fill in white space*/
+    @media(min-width: 375px) {
+      .nav-items-wrapper {
+        bottom: 48px;
+      }
+    }
+
     @media(min-width: 500px) {
       .nav-items-wrapper {
-        left: 24px;
+        left: 72px;
       }
 
       .nav-item {
         font-size: 40px;
-        margin: 48px;
+        margin-bottom: 40px;
       }
     }
 
     @media(min-width: 640px) {
       .nav-items-wrapper {
-        left: 48px;
+        bottom: 64px;
       }
 
       .nav-item {
         font-size: 48px;
-        margin-bottom: 64px;
+        margin-bottom: 48px;
       }
     }
 
