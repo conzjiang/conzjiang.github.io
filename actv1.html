@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <title>Constance Jiang</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    html, body, header, nav, img, main, h1, ul, li, a, section, h2, p, strong, h3 {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: content-box;
+    }
+
+    html, body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: inherit;
+    }
+
+    body {
+      background: #bcf5ff;
+    }
+
+    @media(min-width: 640px) {
+      body {
+        background: #fff;
+      }
+    }
+
+    .content-wrapper {
+      margin: auto;
+      width: 100%;
+      max-width: 640px;
+    }
+
+    @media(min-width: 640px) {
+      .content-wrapper {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+
+    header {
+      position: relative;
+    }
+
+    .header-image {
+      width: 100%;
+    }
+
+    .nav-highlight {
+      display: inline-block;
+      background: #171d16;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .title-wrapper {
+      position: absolute;
+      top: 16px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 40px;
+    }
+
+    /* small breakpoint where title is all on one line */
+    @media(min-width: 375px) and (max-width: 499px) {
+      h1 {
+        background: #171d16;
+      }
+    }
+
+    @media(min-width: 500px) {
+      h1 {
+        letter-spacing: 1px;
+        font-size: 64px;
+      }
+    }
+
+    /* large breakpoint where title is all on one line */
+    @media(min-width: 605px) {
+      .title-wrapper {
+        top: 32px;
+      }
+
+      h1 {
+        background: #171d16;
+      }
+    }
+
+    .nav-items-wrapper {
+      position: absolute;
+      bottom: 32px;
+      left: 48px;
+    }
+
+    .nav-item {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-item:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (hover: hover) {
+      a.nav-highlight:hover {
+        background: #bcf5ff;
+        color: #171d16;
+      }
+    }
+
+    /* Heading is all on one line, so push nav items up more to fill in white space*/
+    @media(min-width: 375px) {
+      .nav-items-wrapper {
+        bottom: 56px;
+      }
+
+      .nav-item {
+        margin-bottom: 24px;
+      }
+    }
+
+    @media(min-width: 500px) {
+      .nav-items-wrapper {
+        bottom: 68px;
+        left: 64px;
+      }
+
+      .nav-item {
+        font-size: 40px;
+      }
+    }
+
+    @media(min-width: 640px) {
+      .nav-items-wrapper {
+        bottom: 80px;
+        left: 72px;
+      }
+
+      .nav-item {
+        font-size: 48px;
+        margin-bottom: 32px;
+      }
+    }
+
+    main {
+      padding: 32px 40px 64px 40px;
+      background: #bcf5ff;
+    }
+
+    @media(min-width: 640px) {
+      main {
+        padding: 32px 48px;
+      }
+    }
+
+    .main-section {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 64px;
+    }
+
+    .main-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .subsection {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .text-list > li {
+      margin-bottom: 8px;
+    }
+
+    .reel-video {
+      width: 240px;
+      height: 135px;
+      margin: auto;
+      display: block;
+    }
+
+    @media(min-width: 640px) {
+      .reel-video {
+        width: 544px;
+        height: 306px;
+      }
+    }
+
+    p {
+      line-height: 24px;
+    }
+
+    .photo-credit {
+      display: block;
+      text-align: center;
+      font-weight: 400;
+      margin: 16px 0;
+    }
+
+    .photo-items-wrapper {
+      text-align: center;
+    }
+
+    .photo-item {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .thumbnail-link {
+      display: block;
+      width: 176px;
+      height: 234px;
+      overflow: hidden;
+    }
+
+    .thumbnail {
+      width: 176px;
+      height: auto;
+    }
+
+    .contact-items-wrapper {
+      text-align: center;
+    }
+
+    .contact-item {
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    .link {
+      font-weight: 700;
+      display: inline-block;
+      padding: 2px 4px;
+    }
+
+    .link-inline {
+      padding: 2px;
+    }
+
+    @media (hover: hover) {
+      .link:hover {
+        background: #171d16;
+        color: #fff;
+      }
+
+      .link-inline:hover {
+
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <header>
+      <img class="header-image" alt="Constance pointing at navigation items" src="images/main.JPG">
+      <div class="title-wrapper">
+        <h1 aria-atomic="true">
+          <span class="nav-highlight">Constance</span> <span class="nav-highlight">Jiang</span>
+        </h1>
+      </div>
+      <nav>
+        <ul class="nav-items-wrapper">
+          <li class="nav-item">
+            <a class="nav-highlight" href="#bio">bio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-highlight" href="#shows">shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-highlight" href="#reel">reel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-highlight" href="#photos">photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-highlight" href="#contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="bio" class="main-section">
+        <h2>bio</h2>
+        <p>Constance Jiang is an Asian American actress/comedian based in Los Angeles, California. Is she 20? Is she 30? The range she has! (She even got mistaken once for a 16-year-old in the year 2019!!) She speaks Mandarin Chinese.</p>
+      </section>
+
+      <section id="shows" class="main-section">
+        <h2>shows</h2>
+
+        <section class="subsection">
+          <h3>upcoming</h3>
+          Coming soon!
+        </section>
+
+        <section class="subsection">
+          <h3>past</h3>
+          <ul class="text-list">
+            <li>2020/03/05 Pretty, Funny Women stand-up comedy showcase @ Flappers</li>
+            <li>2020/02/29 Improv 101 showcase @ UCB Sunset</li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="reel" class="main-section">
+        <h2>reel</h2>
+        <iframe class="reel-video" src="https://www.youtube.com/embed/g2-5GBMR7OQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+
+      <section id="photos" class="main-section">
+        <h2>photos</h2>
+        <ul class="photo-items-wrapper clearfix">
+          <li class="photo-item">
+            <a class="thumbnail-link" href="images/smile.JPG">
+              <img class="thumbnail" alt="Constance's theatrical headshot - smiling against blue background" src="images/smile_thumbnail.JPG">
+            </a>
+          </li>
+          <li class="photo-item">
+            <a class="thumbnail-link" href="images/quirk.JPG">
+              <img class="thumbnail" alt="Constance's theatrical headshot - quirky expression" src="images/quirk_thumbnail.JPG">
+            </a>
+          </li>
+          <li class="photo-item">
+            <a class="thumbnail-link" href="images/work.JPG">
+              <img class="thumbnail" alt="Constance's theatrical headshot - smirking" src="images/work_thumbnail.JPG">
+            </a>
+          </li>
+          <li class="photo-item">
+            <a class="thumbnail-link" href="images/cute.JPG">
+              <img class="thumbnail" alt="Constance's theatrical headshot - smiling against rust background" src="images/cute_thumbnail.JPG">
+            </a>
+          </li>
+          <li class="photo-item">
+            <a class="thumbnail-link" href="images/neutral.JPG">
+              <img class="thumbnail" alt="Constance's theatrical headshot - neutral expression" src="images/neutral_thumbnail.JPG">
+            </a>
+          </li>
+        </ul>
+        <strong class="photo-credit">
+          Photos by <a class="link link-inline" href="https://instagram.com/toshikophoto" target="_blank">@toshikophoto</a>
+        </strong>
+      </section>
+
+      <section id="contact" class="main-section">
+        <h2>contact</h2>
+        <ul class="contact-items-wrapper">
+          <li class="contact-item">
+            <a class="link" href="mailto:conzjiang@gmail.com">email</a>
+          </li>
+          <li class="contact-item">
+            <a class="link" href="https://twitter.com/conzconzbobonz">twitter</a>
+          </li>
+          <li class="contact-item">
+            <a class="link" href="https://instagram.com/hahaitsconstance">instagram</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
